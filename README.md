@@ -1,1 +1,1 @@
-# restaurant-reserv-aspcore
+# Web App for Restaurant advertising and table reservation (Angular)
