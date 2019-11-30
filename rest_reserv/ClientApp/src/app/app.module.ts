@@ -2,12 +2,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { RouterModule } from '@angular/router';
 
+import { ListingModule } from './modules/listing.module';
+
+import { ListingService } from './services/listing.service';
+
 import { AppComponent } from './app.component';
-import { ApiAuthorizationModule } from 'src/api-authorization/api-authorization.module';
-import { AuthorizeGuard } from 'src/api-authorization/authorize.guard';
-import { AuthorizeInterceptor } from 'src/api-authorization/authorize.interceptor';
 
 @NgModule({
   declarations: [
@@ -17,13 +19,14 @@ import { AuthorizeInterceptor } from 'src/api-authorization/authorize.intercepto
     BrowserModule.withServerTransition({ appId: 'ng-cli-universal' }),
     HttpClientModule,
     FormsModule,
-    ApiAuthorizationModule,
     RouterModule.forRoot([
-     
-    ])
+    ]),
+
+    //Custom Modules:
+    ListingModule,
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: AuthorizeInterceptor, multi: true }
+    ListingService
   ],
   bootstrap: [AppComponent]
 })

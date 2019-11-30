@@ -1,0 +1,23 @@
+.listings-wrapper {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  background-color: gray;
+  flex-wrap: wrap;
+  width: 912px;
+
+  .listing {
+    display: flex;
+    width: 220px;
+    height: 140px;
+    justify-content: center;
+    background-color: red;
+    margin: 4px;
+  }
+
+  .listings-page-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 50%;
+  }
+}
