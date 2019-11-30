@@ -5,10 +5,10 @@ namespace rest_reserv.Data.Model
 {
     public partial class ListingLog
     {
-        public int ListingHistoryId { get; set; }
+        public int ListingLogId { get; set; }
         public int ListingId { get; set; }
         public int Version { get; set; }
-        public byte[] ListingImg { get; set; }
+        public string ListingImgPath { get; set; }
         public string ListingTitle { get; set; }
         public decimal ListingRating { get; set; }
         public string ListingDescription { get; set; }

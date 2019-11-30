@@ -1,19 +1,28 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ListingService, Listing } from '../../services/listing.service';
+import { BehaviorSubject } from 'rxjs';
+import { Reference } from '@angular/compiler/src/render3/r3_ast';
 
 @Component({
   selector: "ListingGallery",
   templateUrl: "./listing-gallery.component.html",
-  styleUrls: ["./listing-gallery.component.scss"]
+  styleUrls: ["./listing-gallery.component.scss"],
+  host: { 'class': 'listings-wrapper' }
 })
 export class ListingGalleryComponent implements OnInit {
 
-  public listings: Listing[];
+  private listings: Listing[];
 
-  public listingsPerPage: number = 10; //Even Number.
+  public filteredListings: Listing[];
 
-  public listingPages: number[];
+  public listingsPerPage: number = 12; //Even Number.
+
+  public isPageChanged: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+
+  public pageCount: number;
+
+  public self : any = this;
 
   constructor(private listingService: ListingService)
   {
@@ -23,7 +32,8 @@ export class ListingGalleryComponent implements OnInit {
   ngOnInit() {
     this.listingService.getListings().subscribe(response => {
       this.listings = response;
-      this.listingPages = new Array(this.calculatePageCount(this.getListingCount(), this.listingsPerPage));
+      this.pageCount = (this.calculatePageCount(this.getListingCount(), this.listingsPerPage));
+      this.filterListings(0);
     });
   }
 
@@ -35,7 +45,16 @@ export class ListingGalleryComponent implements OnInit {
     return this.listings.length;
   }
 
-  getPageCount() {
-    return this.listingPages.length;
+  filterListings(pageNumber: number = 0) {
+    let startIndex = this.listingsPerPage * pageNumber;
+    let endIndex = startIndex + this.listingsPerPage;
+
+    this.filteredListings = this.listings.slice(startIndex, endIndex);
+  }
+
+  updateListings(pageNumber: number, ref: any) {
+    ref.filterListings(pageNumber);
+
+    console.log("Updating Gallery!");
   }
 }

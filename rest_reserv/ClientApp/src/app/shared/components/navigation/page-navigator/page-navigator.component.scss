@@ -1,0 +1,22 @@
+:host {
+  display: flex;
+  width: 100%;
+  align-self: flex-end;
+  justify-content: center;
+  background-color: dimgrey;
+
+  .page-num-btn {
+    display: flex;
+    font-size: 1.2em;
+    padding: 2px;
+
+    &:hover {
+      cursor: pointer;
+      color: white;
+    }
+
+    &--selected {
+      color: white;
+    }
+  }
+}

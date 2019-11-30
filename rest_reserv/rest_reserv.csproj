@@ -42,11 +42,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="ClientApp\src\app\components\" />
     <Folder Include="ClientApp\src\app\services\" />
+    <Folder Include="ClientApp\src\app\shared\components\button\icon-button\assets\" />
     <Folder Include="ClientApp\src\app\shared\components\layout\footer\" />
-    <Folder Include="ClientApp\src\app\shared\components\button\" />
     <Folder Include="ClientApp\src\app\shared\pipes\" />
+    <Folder Include="ClientApp\src\assets\images\users\" />
     <Folder Include="Models\" />
     <Folder Include="Pages\Shared\" />
   </ItemGroup>

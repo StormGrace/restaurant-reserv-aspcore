@@ -1,23 +1,55 @@
-.listings-wrapper {
+$columns: 3;
+$spaceBetween: 4px;
+$imgWidth: 240px;
+$imgHeight: 120px;
+$padding: 6px;
+
+:host {
   display: flex;
-  justify-content: center;
-  flex-direction: row;
   background-color: gray;
+  align-items: flex-start;
   flex-wrap: wrap;
-  width: 912px;
+  width: ($columns * $imgWidth) + (($columns - 1) * $spaceBetween) + ($padding * 2);
+  height: 650px;
+  padding: 6px;
 
-  .listing {
-    display: flex;
-    width: 220px;
-    height: 140px;
-    justify-content: center;
-    background-color: red;
-    margin: 4px;
-  }
-
-  .listings-page-wrapper {
+  .listing-wrapper {
     display: flex;
     justify-content: center;
-    width: 50%;
+    flex-wrap: wrap;
+    width: $imgWidth;
+    max-width: $imgWidth;
+    background-color: white;
+
+    .listing-img-wrapper {
+      display: flex;
+      width: $imgWidth;
+      height: $imgHeight;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .listing-info-wrapper {
+
+      .listing-title {
+        font-weight: bold;
+        font-size: 1.2em;
+      }
+    }
   }
+
+  .listing-wrapper:nth-child(3n + 1) {
+    margin-right: $spaceBetween;
+  }
+
+  .listing-wrapper:nth-child(3n) {
+    margin-left: $spaceBetween;
+  }
+}
+
+.page-nav-wrapper {
+   align-self: flex-end;
 }

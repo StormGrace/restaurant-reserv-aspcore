@@ -1,3 +1,4 @@
-<span *ngFor="let page of pages; let i = index;" class="page-navigator">
-  {{(i + 1)}}
+<span *ngFor="let page of _pages; let i = index;" [className]="'page-num-btn page-num-btn-'+(i+1)" (click)="onPageClick($event)">
+    {{(i + 1)}}
 </span>
+

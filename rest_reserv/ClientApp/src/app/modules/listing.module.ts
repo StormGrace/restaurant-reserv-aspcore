@@ -6,7 +6,7 @@ import { HttpClient } from '@angular/common/http';
 
 import { ListingGalleryComponent } from "../components/listing-gallery/listing-gallery.component";
 import { ListingItemComponent } from "../components/listing-gallery/listing-item/listing-item.component";
-//import { PageNavigatorComponent } from "../shared/components/navigation/page-navigator/page-navigator.component";
+import { PageNavigatorComponent } from "../shared/components/navigation/page-navigator/page-navigator.component";
 
 import { ListingService } from './../services/listing.service';
 
@@ -14,7 +14,7 @@ import { ListingService } from './../services/listing.service';
   declarations: [
     ListingGalleryComponent,
     ListingItemComponent,
-    //PageNavigatorComponent
+    PageNavigatorComponent
   ],
   imports: [
     CommonModule,

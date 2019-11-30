@@ -5,7 +5,7 @@ namespace rest_reserv.Data.Model
 {
     public partial class UserLog
     {
-        public int UserHistoryId { get; set; }
+        public int UserLogId { get; set; }
         public int UserId { get; set; }
         public int Version { get; set; }
         public byte[] ProfileImg { get; set; }

@@ -1,8 +1,11 @@
-<div *ngIf="listings" class="listings-wrapper">
-  <span *ngFor="let listing of listings" class="listing">
-    {{listing.listingTitle}}
-  </span>
-  <div class="listings-page-wrapper">
-    
+<ng-container *ngIf="listings">
+  <div *ngFor="let listing of filteredListings" class="listing-wrapper">
+    <div class="listing-img-wrapper">
+      <img [src]="'../../../assets/images/listings/' + listing.listingImgPath"/>
+    </div>
+    <div class="listing-info-wrapper">
+      <span class="listing-title">{{listing.listingTitle}}</span>
+    </div>
   </div>
-</div>
+  <PageNavigator [pages] = "pageCount" [pagesVisible] = "6" [callback] = "updateListings" [ref] = "this"></PageNavigator>
+</ng-container>

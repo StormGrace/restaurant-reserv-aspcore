@@ -20,7 +20,7 @@ namespace rest_reserv.Controllers
         {
           List<Listing> listings = new List<Listing>();
 
-          for(int i = 0; i < 20; i++)
+          for(int i = 0; i < 134; i++)
           {
             listings.Add(new Listing("Placeholder Title " + (i + 1)));
           }
@@ -32,10 +32,12 @@ namespace rest_reserv.Controllers
     public class Listing
     {
       public string listingTitle { get; set; }
+      public string listingImgPath { get; set; }
 
       public Listing(string providedListingTitle)
       {
         listingTitle = providedListingTitle;
+        listingImgPath = "rest-1.jpg";
       }
     }
 }

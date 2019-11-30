@@ -6,6 +6,7 @@ import { Observable } from 'rxjs';
 export interface Listing {
   listingTitle: string,
   listingDescription: string,
+  listingImgPath: string,
 }
 
 @Injectable({
