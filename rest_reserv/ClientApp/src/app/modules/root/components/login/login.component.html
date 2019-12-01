@@ -1,0 +1,27 @@
+<div class="container">
+  <form [formGroup]="loginForm">
+    <div class="form-group row">
+      <label for="email" class="col-12">Имейл:</label>
+      <input type="text" id="email" class="form-control col-12 col-sm-6" formControlName="email" />
+      <div class="col-12 text-danger" *ngIf="loginForm.get('email').hasError('required') && loginForm.get('email').touched">
+        Полето за имейл е задължително.
+      </div>
+      <div class="col-12 text-danger" *ngIf="loginForm.get('email').hasError('email') && loginForm.get('email').touched">
+        Въведете валиден имейл.
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="pwd" class="col-12">Парола:</label>
+      <input type="password" id="pwd" class="form-control col-12 col-sm-6" formControlName="password" />
+      <div class="col-12 text-danger" *ngIf="loginForm.get('password').hasError('required') && loginForm.get('password').touched">
+        Полето за имейл е задължително.
+      </div>
+      <div class="col-12 text-danger" *ngIf="loginForm.get('password').hasError('minlength') && loginForm.get('password').touched">
+        Полето за парола следва да съдържа минимум 5 символа.
+      </div>
+    </div>
+    <div class="form-group row">
+      <button class="btn btn-info" type="button" (click)="onLoginButtonClicked()">Вписване</button>
+    </div> 
+  </form>
+</div>

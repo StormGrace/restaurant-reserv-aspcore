@@ -7,6 +7,7 @@ export interface Listing {
   listingTitle: string,
   listingDescription: string,
   listingImgPath: string,
+  listingReviewCount: number,
 }
 
 @Injectable({

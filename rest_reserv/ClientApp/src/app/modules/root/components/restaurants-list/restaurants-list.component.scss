@@ -1,0 +1,22 @@
+:host{
+  display: flex;
+  justify-content: center;
+}
+
+.rest-list-container {
+  margin-top : 20px;
+
+  .rest-list-header{
+
+
+    &__title{
+      
+    }
+  }
+
+  ListingGallery {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+ 

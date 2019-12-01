@@ -1,0 +1,41 @@
+nav {
+  margin-top: 10px;
+  display: block;
+  top: 0;
+  z-index: 100;
+  position: sticky;
+  background-color: #1A1A1D !important;
+}
+a{
+  color:white !important;
+}
+
+#logo-wrapper {
+  justify-content: flex-end;
+  cursor: pointer;
+}
+
+li {
+  cursor: pointer;
+  font-weight: bold;
+}
+
+#header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 10px;
+}
+
+.active {
+  color: #0094ff !important;
+  border-bottom: 2px blueviolet solid;
+}
+.icon-login
+{
+  font-family:'icons';
+}
+
+.contact-line {
+  height: 20px;
+  margin-bottom: -10px;
+}

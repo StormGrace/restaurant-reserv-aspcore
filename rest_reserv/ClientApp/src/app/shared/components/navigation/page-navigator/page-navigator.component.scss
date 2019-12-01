@@ -1,22 +1,61 @@
+$pageButtonsColor: #0f8bf7;
+$navButtonsColor: #1082e6;
+$hoverColor: #1082e6;
+
 :host {
   display: flex;
   width: 100%;
-  align-self: flex-end;
+  height: 35px;
   justify-content: center;
-  background-color: dimgrey;
+  align-items: center;
+  font-size: 1.2em;
+  font-weight: bold;
+  //background-color: dimgrey;
+
+  .page-nav-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    cursor: pointer;
+    color: white;
+    background-color: $navButtonsColor;
+    width: 2 * 6;
+    height: 100%;
+    border-radius: 2px;
+
+    &:hover {
+      background-color: $hoverColor;
+    }
+
+    &--prev {
+      margin-right: 6px;
+    }
+
+    &--next {
+      margin-left: 6px;
+    }
+  }
 
   .page-num-btn {
     display: flex;
-    font-size: 1.2em;
-    padding: 2px;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding: 6px;
+    color: $pageButtonsColor;
 
     &:hover {
       cursor: pointer;
-      color: white;
+      color: $hoverColor;
     }
 
     &--selected {
-      color: white;
+      color: blueviolet;
+
+      &:hover {
+        color: white;
+      }
     }
   }
 }

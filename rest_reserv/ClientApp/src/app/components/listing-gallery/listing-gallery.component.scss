@@ -1,17 +1,38 @@
 $columns: 3;
-$spaceBetween: 4px;
+$spaceBetween: 6px;
 $imgWidth: 240px;
 $imgHeight: 120px;
 $padding: 6px;
 
 :host {
   display: flex;
-  background-color: gray;
+  justify-content: flex-start;
   align-items: flex-start;
   flex-wrap: wrap;
   width: ($columns * $imgWidth) + (($columns - 1) * $spaceBetween) + ($padding * 2);
-  height: 650px;
-  padding: 6px;
+  min-height: 654px;
+  padding: 6px 6px 0 6px;
+
+  .listings-info-wrapper {
+    display: flex;
+    width: 100%;
+    padding: 20px;
+
+    .listings-stats {
+      display: flex;
+      font-size: 1.25em;
+      font-weight: bold;
+      width: 50%;
+    }
+
+    .listings-info-current {
+      display: flex;
+      font-size: 1.15em;
+      font-weight: bold;
+      justify-content: flex-end;
+      width: 50%;
+    }
+  }
 
   .listing-wrapper {
     display: flex;
@@ -19,7 +40,7 @@ $padding: 6px;
     flex-wrap: wrap;
     width: $imgWidth;
     max-width: $imgWidth;
-    background-color: white;
+    background-color: #ededed;
 
     .listing-img-wrapper {
       display: flex;
@@ -32,24 +53,53 @@ $padding: 6px;
       }
     }
 
-    .listing-info-wrapper {
+    .listing-info {
+      width: 100%;
 
-      .listing-title {
+      &__rest-title {
+        display: flex;
         font-weight: bold;
         font-size: 1.2em;
+      }
+
+      &__rating {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 4px;
+
+        span{
+          font-size: 1.05em;
+          font-weight: bold;
+        }
+        Rating {
+          width: 50%;
+        }
+      }
+
+      &__buttons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
       }
     }
   }
 
-  .listing-wrapper:nth-child(3n + 1) {
-    margin-right: $spaceBetween;
-  }
 
   .listing-wrapper:nth-child(3n) {
     margin-left: $spaceBetween;
+    margin-right: $spaceBetween
+  }
+
+  .listing-wrapper:nth-child(n + 5) {
+    margin-top: $spaceBetween * 2;
+  }
+
+
+  PageNavigator {
+    margin-top: 40px;
+    align-self: flex-end;
   }
 }
 
-.page-nav-wrapper {
-   align-self: flex-end;
-}

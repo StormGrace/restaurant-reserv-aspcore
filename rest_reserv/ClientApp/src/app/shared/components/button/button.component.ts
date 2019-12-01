@@ -1,15 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Directive, OnInit } from '@angular/core';
+
 
 @Component({
-  selector: 'app-button',
+  selector: 'CButton',
   templateUrl: './button.component.html',
-  styleUrls: ['./button.component.scss']
+  styleUrls: ['./button.component.scss'],
+  host: {'class' : 'button'}
 })
 export class ButtonComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit()
+  {
+
   }
 
+  ngAfterViewInit()
+  {
+
+  }
 }

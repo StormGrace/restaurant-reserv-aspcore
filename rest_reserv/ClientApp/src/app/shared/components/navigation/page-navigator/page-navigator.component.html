@@ -1,4 +1,10 @@
+<div class="nav-button page-nav-button button page-nav-button--prev" (click)="onNavClick($event)">
+  Previous
+</div>
 <span *ngFor="let page of _pages; let i = index;" [className]="'page-num-btn page-num-btn-'+(i+1)" (click)="onPageClick($event)">
-    {{(i + 1)}}
+  {{(i + 1)}}
 </span>
+<div class="nav-button page-nav-button button page-nav-button--next" (click)="onNavClick($event)">
+  Next
+</div>
 

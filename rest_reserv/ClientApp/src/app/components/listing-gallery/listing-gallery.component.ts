@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { ListingService, Listing } from '../../services/listing.service';
+
 import { BehaviorSubject } from 'rxjs';
 import { Reference } from '@angular/compiler/src/render3/r3_ast';
 
@@ -15,6 +16,10 @@ export class ListingGalleryComponent implements OnInit {
   private listings: Listing[];
 
   public filteredListings: Listing[];
+
+  public currentStartIndex: number;
+
+  public currentEndIndex: number;
 
   public listingsPerPage: number = 12; //Even Number.
 
@@ -49,12 +54,15 @@ export class ListingGalleryComponent implements OnInit {
     let startIndex = this.listingsPerPage * pageNumber;
     let endIndex = startIndex + this.listingsPerPage;
 
+    this.currentStartIndex = startIndex + 1;
+    this.currentEndIndex = Math.min(endIndex, this.getListingCount());
+
     this.filteredListings = this.listings.slice(startIndex, endIndex);
   }
 
   updateListings(pageNumber: number, ref: any) {
-    ref.filterListings(pageNumber);
-
     console.log("Updating Gallery!");
+
+    ref.filterListings(pageNumber);
   }
 }
