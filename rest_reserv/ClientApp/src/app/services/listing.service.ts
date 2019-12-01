@@ -14,7 +14,7 @@ export interface Listing {
   providedIn: 'root'
 })
 export class ListingService {
-  private readonly getURL = 'http://localhost:50905/Listing/GetAllListings';
+  private readonly getURL = 'http://localhost:50905/Listing/';
 
   constructor(private http: HttpClient)
   {
@@ -22,7 +22,12 @@ export class ListingService {
 
   public getListings(): Observable<Listing[]>
   {
-    return this.http.get<Listing[]>(this.getURL);
+    return this.http.get<Listing[]>(this.getURL + 'GetListings');
+  }
+
+  public getListing(name: string): Observable<Listing>
+  {
+    return this.http.get<Listing>(this.getURL + 'GetListing?name=' + name);
   }
 }
 

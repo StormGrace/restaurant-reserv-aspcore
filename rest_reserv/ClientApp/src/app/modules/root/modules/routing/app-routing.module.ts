@@ -8,7 +8,7 @@ import { PageNotFoundComponent } from '../../components/page-not-found/page-not-
 import { LoginContainerComponent } from '../../components/login-container/login-container.component';
 import { LoginComponent } from '../../components/login/login.component';
 import { RegisterComponent } from '../../components/register/register.component';
-
+import { ListingComponent } from '../../components/listing/listing.component';
 
 const routes: Routes = [
     {
@@ -32,8 +32,12 @@ const routes: Routes = [
         ]
     },
     {
-        path: '**', component: PageNotFoundComponent
-    }
+      path: 'listing/:name', component: ListingComponent
+    },
+    {
+      path: '**', component: PageNotFoundComponent
+    },
+
 ];
 
 @NgModule({

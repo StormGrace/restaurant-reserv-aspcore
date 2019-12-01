@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms'; // Ñòúïêà 1 - äîáàâÿø ñè ìîäóëèòå òóê, çàùîòî òîâà å ìîäóëà òè, â êîéòî ñå íàìèðàò êîìïîíåíòèòå, â êîèòî ñìÿòàø äà èçïîëçâàø ôîðìè.
-
+import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './modules/routing/app-routing.module';
 import { ListingModule } from './modules/listing.module';
 
@@ -15,7 +15,7 @@ import { RestaurantsListComponent } from './components/restaurants-list/restaura
 import { LoginContainerComponent } from './components/login-container/login-container.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-
+import { ListingComponent } from './components/listing/listing.component';
 
 @NgModule({
     declarations: [
@@ -28,14 +28,16 @@ import { RegisterComponent } from './components/register/register.component';
         RestaurantsListComponent,
         LoginContainerComponent,
         LoginComponent,
-        RegisterComponent
+        RegisterComponent,
+        ListingComponent
     ],
     imports: [
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
         FormsModule,
-        ListingModule
+        ListingModule,
+        RouterModule
     ],
     providers: [],
     bootstrap: [AppComponent]

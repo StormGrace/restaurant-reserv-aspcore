@@ -17,7 +17,7 @@ namespace rest_reserv.Controllers
         }
 
         [HttpGet]
-        public JsonResult GetAllListings()
+        public JsonResult GetListings()
         {
           List<Listing> listings = new List<Listing>();
 
@@ -27,6 +27,12 @@ namespace rest_reserv.Controllers
           }
 
           return new JsonResult(listings);
+        }
+
+        [HttpGet]
+        public JsonResult GetListing(string name)
+        {
+          return new JsonResult(_listingLogRepository.FindLatestByName(name));
         }
     }
 

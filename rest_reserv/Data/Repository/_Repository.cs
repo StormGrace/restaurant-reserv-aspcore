@@ -54,6 +54,11 @@ namespace rest_reserv.Data.Repository
       return _context.Set<T>().FirstOrDefault(predicate);
     }
 
+    public T FindLast(Func<T, bool> predicate)
+    {
+      return _context.Set<T>().LastOrDefault(predicate);
+    }
+
     public bool Exists(Func<T, bool> predicate)
     {
       return _context.Set<T>().Any(predicate);

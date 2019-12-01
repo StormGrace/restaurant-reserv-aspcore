@@ -4,6 +4,7 @@ import { ListingService, Listing } from '../../services/listing.service';
 
 import { BehaviorSubject } from 'rxjs';
 import { Reference } from '@angular/compiler/src/render3/r3_ast';
+import { Router } from '@angular/router';
 
 @Component({
   selector: "ListingGallery",
@@ -29,7 +30,7 @@ export class ListingGalleryComponent implements OnInit {
 
   public self : any = this;
 
-  constructor(private listingService: ListingService)
+  constructor(private listingService: ListingService, private router: Router)
   {
     
   }
@@ -64,5 +65,15 @@ export class ListingGalleryComponent implements OnInit {
     console.log("Updating Gallery!");
 
     ref.filterListings(pageNumber);
+  }
+
+  getListingInfo(listingName: string) {
+    if (listingName != null) {
+      let listingURL: string = "listing/" + listingName.toLowerCase().replace(/\s+/g, '-');
+
+      this.router.navigateByUrl(listingURL, {
+        state: { example: 'data' }
+      });
+    }
   }
 }
