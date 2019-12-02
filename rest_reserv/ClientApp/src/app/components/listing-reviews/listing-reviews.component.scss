@@ -1,0 +1,55 @@
+:host {
+  width: 100%;
+  background-color: white;
+  padding: 20px;
+
+  .reviews__header {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .reviews-count {
+      font-size: 2em;
+      font-weight: bold;
+    }
+
+    &__buttons {
+      display:flex;
+      flex-direction: row;
+      margin-left: 14px;
+
+      CButton {
+        margin-left: 4px;
+        font-size: 1.4em;
+        display: flex;
+        height: 34px;
+      }
+    }
+  }
+
+  .reviews-wrapper__hl {
+    display: flex;
+    width: 100%;
+    height: 1px;
+    background-color: #f0f0f0;
+  }
+
+  .reviews-container {
+    padding: 26px;
+
+    &__hl {
+      display: flex;
+      width: 100%;
+      height: 1px;
+      background-color: #f0f0f0;
+      margin-top: 10px;
+    }
+  }
+
+  .no-reviews-label {
+    font-size: 2em;
+    font-weight: bold;
+    font-style: italic;
+  }
+}

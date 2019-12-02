@@ -13,5 +13,7 @@ namespace rest_reserv.Data.Repository.Interface
     public IEnumerable<ListingLog> FindAllById(int id);
 
     public IEnumerable<ListingLog> FindAllByName(string name);
+
+    public IEnumerable<ListingLog> FindAllLatest();
   }
 }

@@ -26,6 +26,9 @@ namespace rest_reserv.Controllers
             listings.Add(new Listing("Placeholder Title " + (i + 1)));
           }
 
+          //DB Fetch.
+          //return new JsonResult(_listingLogRepository.FindAllLatest());
+
           return new JsonResult(listings);
         }
 

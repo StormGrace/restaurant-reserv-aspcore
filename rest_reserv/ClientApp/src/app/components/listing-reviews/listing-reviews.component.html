@@ -1,0 +1,20 @@
+<div class="reviews-wrapper">
+  <span class="reviews-wrapper__hl"></span>
+  <div class="reviews__header">
+    <span class="reviews-count">User Reviews (0)</span>
+    <div class="reviews__header__buttons">
+      <CButton>Write a Review</CButton>
+    </div>
+  </div>
+  <div class="reviews-container">
+    <span class="reviews-container__hl"></span>
+    <ng-container *ngIf="listingReviews; else noReviews">
+      <div *ngFor="let review of listingReviews" class="review">
+
+      </div>
+    </ng-container>
+    <ng-template #noReviews>
+      <span class="no-reviews-label">No Reviews Yet.</span>
+    </ng-template>
+  </div>
+</div>

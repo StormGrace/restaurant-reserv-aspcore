@@ -1,0 +1,3 @@
+<img *ngIf="!hasLoaded" src="../../../../assets/images/loading/load-indicator.gif" class="loading-indicator" [hidden]="hasLoaded" />
+<img src={{imagePath}} (load)="onLoad()" [hidden]="!hasLoaded" />
+

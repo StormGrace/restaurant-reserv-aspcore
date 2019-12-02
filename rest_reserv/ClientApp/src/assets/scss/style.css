@@ -89,6 +89,10 @@ html {
 body {
   margin: 0;
 }
+body:after {
+  content: url('../images/loading/loading-indicator.gif');
+  display: none;
+}
 
 main {
   display: block;

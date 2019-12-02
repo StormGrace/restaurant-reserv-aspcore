@@ -1,11 +1,11 @@
 <ng-container *ngIf="filteredListings">
   <div class="listings-info-wrapper">
-    <span class="listings-stats listings-info-total">Общо резултати: {{getListingCount()}}</span>
-    <span class="listings-stats listings-info-current">{{currentStartIndex}} - {{currentEndIndex}} от {{getListingCount()}}</span>
+    <span class="listings-stats listings-info-total">Total Results: {{getListingCount()}}</span>
+    <span class="listings-stats listings-info-current">{{currentStartIndex}} - {{currentEndIndex}} of {{getListingCount()}} Restaurants</span>
   </div>
   <div *ngFor="let listing of filteredListings" class="listing-wrapper">
-    <div class="listing-img-wrapper">
-      <img [src]="'../../../assets/images/listings/' + listing.listingImgPath" />
+    <div class="listing-img-wrapper ">
+      <Image [imagePath]="'../../../assets/images/listings/' + listing.listingImgPath" (click)="getListingInfo(listing.listingTitle)"></Image>
     </div>
     <div class="listing-info">
       <span class="listing-info__rest-title">{{listing.listingTitle}}</span>
@@ -14,8 +14,8 @@
         <span>{{listing.listingReviewCount}} Reviews</span>
       </div>
       <div class="listing-info__buttons">
-        <CButton class="listing-info__buttons-reserve">Резервирай</CButton>
-        <CButton class="listing-info__buttons-order">Поръчай</CButton>
+        <CButton class="listing-info__buttons-reserve">Reserve</CButton>
+        <CButton class="listing-info__buttons-order">Order</CButton>
       </div>
     </div>
   </div>

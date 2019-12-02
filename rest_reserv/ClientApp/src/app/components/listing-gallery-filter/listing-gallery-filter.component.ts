@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-listing-gallery-filter',
+  selector: 'ListingGalleryFilter',
   templateUrl: './listing-gallery-filter.component.html',
-  styleUrls: ['./listing-gallery-filter.component.css']
+  styleUrls: ['./listing-gallery-filter.component.scss']
 })
 export class ListingGalleryFilterComponent implements OnInit {
 

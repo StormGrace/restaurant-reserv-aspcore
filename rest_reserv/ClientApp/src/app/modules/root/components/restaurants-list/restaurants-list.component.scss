@@ -4,19 +4,42 @@
 }
 
 .rest-list-container {
-  margin-top : 20px;
+  margin-top: 20px;
 
-  .rest-list-header{
-    color:white;
+  .rest-list-header {
+    color: white;
 
-    &__title{
-      
+    .fa-search {
+      color: #0c6ec4
+    }
+
+    input::placeholder {
+     color: #0c6ec4;
+     font-weight: bold;
+    }
+
+    .form-2 {
+      margin-top: 20px;
+    }
+
+    &__title {
     }
   }
 
-  ListingGallery {
-    margin-top: 20px;
-    margin-bottom: 20px;
+  .listing-gallery-wrapper {
+    display: flex;
+
+    ListingGalleryFilter {
+      margin-top: 40px;
+      margin-right: 30px;
+    }
+
+    ListingGallery {
+      margin-top: 6px;
+      margin-bottom: 20px;
+    }
   }
 }
+
+
  

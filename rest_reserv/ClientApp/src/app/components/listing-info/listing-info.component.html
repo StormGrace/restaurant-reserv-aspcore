@@ -1,0 +1,33 @@
+<ng-container *ngIf="listing">
+  <div class="listing__header">
+    <span class="listing__header__title">{{listing.listingTitle}}</span>
+    <span class="listing__header__hl"></span>
+    <div class="listing__header__info">
+      <div class="listing__header__info__rating">
+        <Rating></Rating>
+        <span>0 reviews</span>
+      </div>
+      <div class="listing__header__info__contacts">
+        <a href="#"><i class="fas fa-mobile-alt"> {{listing.listingPhone}}</i></a>
+        <a [href]="listing.listingSite"><i class="fas fa-laptop"> Website</i></a>
+      </div>
+      <div class="listing__header__info__buttons">
+        <CButton>Reserve a Table</CButton>
+        <CButton>Order Online</CButton>
+      </div>
+      <div class="listing__header__info__buttons">
+        <IconButton [iconClass]="'fas fa-save'">Save</IconButton>
+        <IconButton [iconClass]="'far fa-share-square'">Share</IconButton>
+      </div>
+    </div>
+  </div>
+  <div class="listing__main">
+    <div class="listing__main__img-wrapper">
+      <Image class="listing__main__img" [imagePath]="'../../../assets/images/listings/' + listing.listingImgPath"></Image>
+    </div>
+    <div class="listing__main__desc">
+      <span class="listing__main__desc__header">Details</span>
+      <span class="listing__main__desc__info">{{listing.listingDescription}}</span>
+    </div>
+  </div>
+</ng-container>

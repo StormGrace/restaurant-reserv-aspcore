@@ -29,7 +29,7 @@ import { ListingComponent } from './components/listing/listing.component';
         LoginContainerComponent,
         LoginComponent,
         RegisterComponent,
-        ListingComponent
+        ListingComponent,
     ],
     imports: [
         BrowserModule,

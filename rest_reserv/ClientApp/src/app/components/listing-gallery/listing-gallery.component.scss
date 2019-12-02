@@ -41,15 +41,22 @@ $padding: 6px;
     width: $imgWidth;
     max-width: $imgWidth;
     background-color: #ededed;
+    border-bottom: 3px solid #0c6ec4;
+
+    &:hover {
+      border-bottom: 3px solid #309eff;
+    }
 
     .listing-img-wrapper {
       display: flex;
       width: $imgWidth;
       height: $imgHeight;
+      justify-content: center;
+      align-items: center;
 
-      img {
-        width: 100%;
-        height: 100%;
+      Image {
+        width: $imgWidth;
+        height: $imgHeight;
       }
     }
 
@@ -69,10 +76,11 @@ $padding: 6px;
         align-items: center;
         padding: 0 4px;
 
-        span{
+        span {
           font-size: 1.05em;
           font-weight: bold;
         }
+
         Rating {
           width: 50%;
         }

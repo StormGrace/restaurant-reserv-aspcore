@@ -13,6 +13,7 @@ namespace rest_reserv.Data.Repository
       _context = context;
     }
 
+    
     public ListingLog FindLatestById(int id)
     {
       return FindLast(listing => listing.ListingId.Equals(id));
@@ -31,6 +32,12 @@ namespace rest_reserv.Data.Repository
     public IEnumerable<ListingLog> FindAllByName(string name)
     {
       return Find(listing => listing.ListingTitle.ToLower().Replace(' ', '-').Equals(name));
+    }
+
+    //Should be modified in the Future to return all Listing Logs but only the latest ones.
+    public IEnumerable<ListingLog> FindAllLatest()
+    {
+      return _context.ListingLog;
     }
   }
 }

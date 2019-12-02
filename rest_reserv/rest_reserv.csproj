@@ -47,6 +47,7 @@
     <Folder Include="ClientApp\src\app\shared\components\layout\footer\" />
     <Folder Include="ClientApp\src\app\shared\components\navigation\button-navigator\" />
     <Folder Include="ClientApp\src\app\shared\pipes\" />
+    <Folder Include="ClientApp\src\assets\images\loading\" />
     <Folder Include="ClientApp\src\assets\images\users\" />
     <Folder Include="Models\" />
     <Folder Include="Pages\Shared\" />

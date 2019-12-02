@@ -5,9 +5,18 @@ import { Observable } from 'rxjs';
 
 export interface Listing {
   listingTitle: string,
-  listingDescription: string,
   listingImgPath: string,
   listingReviewCount: number,
+}
+
+export interface ListingInfo {
+  listingTitle: string,
+  listingPhone: string,
+  listingWebsite: string,
+  listingDescription: string,
+  listingReviewCount: number,
+  listingnImgPath: string,
+  listingRating: number,
 }
 
 @Injectable({
@@ -25,9 +34,9 @@ export class ListingService {
     return this.http.get<Listing[]>(this.getURL + 'GetListings');
   }
 
-  public getListing(name: string): Observable<Listing>
+  public getListing(name: string): Observable<ListingInfo>
   {
-    return this.http.get<Listing>(this.getURL + 'GetListing?name=' + name);
+    return this.http.get<ListingInfo>(this.getURL + 'GetListing?name=' + name);
   }
 }
 
