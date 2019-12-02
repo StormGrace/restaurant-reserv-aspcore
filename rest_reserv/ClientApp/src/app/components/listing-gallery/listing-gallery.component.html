@@ -5,7 +5,7 @@
   </div>
   <div *ngFor="let listing of filteredListings" class="listing-wrapper">
     <div class="listing-img-wrapper">
-      <a (click)="getListingInfo(listing.listingTitle)"><img [src]="'../../../assets/images/listings/' + listing.listingImgPath" /></a>
+      <img [src]="'../../../assets/images/listings/' + listing.listingImgPath" />
     </div>
     <div class="listing-info">
       <span class="listing-info__rest-title">{{listing.listingTitle}}</span>

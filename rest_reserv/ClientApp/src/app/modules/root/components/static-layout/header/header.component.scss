@@ -4,17 +4,22 @@ nav {
   top: 0;
   z-index: 100;
   position: sticky;
-  background-color: #1A1A1D !important;
+  background-color: #323233 !important;
 }
 a{
   color:white !important;
 }
-
+.logo{
+  width:50px;
+}
 #logo-wrapper {
   justify-content: flex-end;
   cursor: pointer;
 }
-
+.logo-name{
+  color:white;
+  margin:0 30px 0 10px;
+}
 li {
   cursor: pointer;
   font-weight: bold;
@@ -27,8 +32,8 @@ li {
 }
 
 .active {
-  color: #0094ff !important;
-  border-bottom: 2px blueviolet solid;
+  color: #0094FF !important;
+  border-bottom: 2px #8A2BE2 solid;
 }
 .icon-login
 {

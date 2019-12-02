@@ -1,3 +1,29 @@
-footer {
-  flex-shrink: 0;
+
+.container-fluent {
+  background-color: #F2EBDC;
+  width: 100%;
+  height:auto;
+  color: dimgray;
+}
+.fa {
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+.fa-instagram {
+  color: white;
+  background: #e4405f;
+}
+li {
+  list-style: none;
+}
+
+.reserved{
+  color:dimgray;
 }

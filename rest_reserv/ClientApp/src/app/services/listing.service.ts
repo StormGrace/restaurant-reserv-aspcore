@@ -14,7 +14,7 @@ export interface Listing {
   providedIn: 'root'
 })
 export class ListingService {
-  private readonly getURL = 'http://localhost:50905/Listing/';
+  private readonly getURL = 'http://localhost:50260/Listing/';
 
   constructor(private http: HttpClient)
   {
