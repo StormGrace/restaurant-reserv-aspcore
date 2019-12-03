@@ -16,6 +16,7 @@ import { LoginContainerComponent } from './components/login-container/login-cont
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ListingComponent } from './components/listing/listing.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
     declarations: [
@@ -30,6 +31,7 @@ import { ListingComponent } from './components/listing/listing.component';
         LoginComponent,
         RegisterComponent,
         ListingComponent,
+		ContactComponent
     ],
     imports: [
         BrowserModule,

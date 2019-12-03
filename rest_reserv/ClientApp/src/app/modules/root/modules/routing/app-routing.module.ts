@@ -9,6 +9,7 @@ import { LoginContainerComponent } from '../../components/login-container/login-
 import { LoginComponent } from '../../components/login/login.component';
 import { RegisterComponent } from '../../components/register/register.component';
 import { ListingComponent } from '../../components/listing/listing.component';
+import { ContactComponent } from '../../components/contact/contact.component';
 
 const routes: Routes = [
     {
@@ -22,6 +23,9 @@ const routes: Routes = [
     },
     {
         path: 'about', component: AboutComponent
+    },
+    {
+        path: 'contact', component: ContactComponent
     },
     {
         path: 'auth', component: LoginContainerComponent, children: [

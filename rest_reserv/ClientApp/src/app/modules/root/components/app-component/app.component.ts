@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
     constructor() {
-        document.body.style.background = 'rgba(1,1,1,1)';
+        //document.body.style.background = 'black';
     }
+  //#ebebeb
   title = '';
 }
