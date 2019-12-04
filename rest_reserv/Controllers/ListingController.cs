@@ -19,17 +19,19 @@ namespace rest_reserv.Controllers
         [HttpGet]
         public JsonResult GetListings()
         {
-          List<Listing> listings = new List<Listing>();
+          /*List<Listing> listings = new List<Listing>();
 
           for(int i = 0; i < 134; i++)
           {
             listings.Add(new Listing("Placeholder Title " + (i + 1)));
           }
 
-          //DB Fetch.
-          //return new JsonResult(_listingLogRepository.FindAllLatest());
-
           return new JsonResult(listings);
+       
+          */
+
+          //DB Fetch.
+          return new JsonResult(_listingLogRepository.FindAllLatest());
         }
 
         [HttpGet]

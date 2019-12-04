@@ -17,6 +17,10 @@ export class RatingComponent implements OnInit {
   ngOnInit() {
   }
 
+  selectStars(stars: number) {
+    
+  }
+
   onStarSelect(event) {
     let target = event.target;
 
